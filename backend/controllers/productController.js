@@ -1,7 +1,7 @@
-export const getProducts = (req, res) => {
-  //get all products
-  res.send("All Products");
-};
-export const createProducts = (req, res) => {
-  //create a product
-};
+import { sql } from "../config/db.js";
+
+export const getProducts = async (req, res) => {};
+export const createProduct = async (req, res) => {};
+export const getProduct = async (req, res) => {};
+export const updateProduct = async (req, res) => {};
+export const deleteProduct = async (req, res) => {};
