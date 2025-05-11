@@ -3,6 +3,14 @@
 cd to frontend and run:
 npm create vite@latest .
 
+# Added packages:
+
+npm i react-hot-toast react-router-dom axios zustand lucide-react
+
+# Shortcut for extention ES7+ React/Redux/React-Native snippets:
+
+rfce,
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
