@@ -1,9 +1,12 @@
 import React from "react";
 import { PaletteIcon } from "lucide-react";
 import { THEMES } from "../constants";
+import { useThemeStore } from "../store/useThemeStore";
 
 function ThemeSelector() {
-  const theme = "forest";
+  const { theme, setTheme } = useThemeStore();
+  console.log(theme);
+
   return (
     <div className="dropdown dropdown-end">
       {/* dropdown trigger */}
@@ -17,6 +20,7 @@ function ThemeSelector() {
         {THEMES.map((themeOption) => (
           <button
             key={themeOption.name}
+            onClick={() => setTheme(themeOption.name)}
             className={`w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors ${
               theme === themeOption.name
                 ? "bg-primary/10 text-primary"
