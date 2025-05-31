@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useProductStore } from "../store/useProductStore";
-import { PlusCircleIcon, RefreshCcwIcon } from "lucide-react";
+import { PackageIcon, PlusCircleIcon, RefreshCcwIcon } from "lucide-react";
 
 import ProductCard from "../components/ProductCard.jsx";
 
@@ -23,6 +23,21 @@ function HomePage() {
       </div>
 
       {error && <div className="alert alert-error mb-4">{error}</div>}
+
+      {products.length === 0 && !loading && (
+        <div>
+          <div className="flex justify-center items-center h-32">
+            <PackageIcon className="size-16" />
+          </div>
+          <div className="text-center text-3xl font-semibold mb-3">
+            No Products Found
+          </div>
+          <div className="text-center text-gray-500">
+            Get started by adding first product to the inventory.
+          </div>
+        </div>
+      )}
+
       {loading ? (
         <div className="flex justify-center items-center h-64">
           <div className="loading loading-spinner loading-lg" />
